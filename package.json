@@ -1,0 +1,27 @@
+{
+  "name": "git-tix",
+  "version": "1.0.0",
+  "description": "github issue manager",
+  "main": "server.js",
+  "scripts": {
+    "test":  "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DishantaK/gitTickets.git"
+  },
+  "author": "Dishanta K, Matt G, Tisha T, Marcus R, Sean H",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DishantaK/gitTickets/issues"
+  },
+  "homepage": "https://github.com/DishantaK/gitTickets#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.14"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
