@@ -1,50 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>git Tix</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet "
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/minty/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>gitTix - Login or Signup</title>
+  </head>
+  <body>
     <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                    <a class="navbar-brand" href="#"><img src="images/logowhite.png" id="logo" placeholder="gitTix"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                  
-                    <div class="collapse navbar-collapse" id="navbarColor01">
-                      <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                          <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Login/Signup</a>
-                        </li>
-                        
-                      </ul>
-                      
-                    </div>
-                  </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#" class="center"
+          ><img src="images/logowhite.png" id="logo" placeholder="gitTix"
+        /></a>
+      </nav>
     </header>
-    <main></main>
-    <footer></footer>
-    
-    <!-- <div class="modal-container hide">
-         <div class="modal">
-            <h2>Compose new Tweet <span class="close-modal">x</span></h2>
-            <textarea id="text" maxlength="140" placeholder="What's happening?"></textarea>
-            <div id="counter"></div>
-            <button id="compose-tweet" class="tweet-button fire">Tweet</button>
-    </div> -->
+    <main>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id=inputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
 
+        <div class="form-group">
+          <label class="col-form-label" for="inputDefault">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Default input"
+            id="inputUsername"
+          />
+        </div>
+        <div class="form-group">
+          <label for="inputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword1"
+            placeholder="Password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="inputPassword2"> Confirm Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword2"
+            placeholder="Password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary mx-auto">Submit</button>
+ 
+      </form>
+    </main>
 
     <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-</body>
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
