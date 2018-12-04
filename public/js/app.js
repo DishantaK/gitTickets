@@ -1,5 +1,4 @@
 const userName = document.getElementById('inputUsername')
-const submitButton = document.getElementById('submit')
 const issues = document.getElementById('data')
 const client_id = 'Iv1.60760d2b9e87f926';
 const client_secret = '5159f5c2bc3db0d29718cea17281df1b9646ad16';
@@ -13,32 +12,39 @@ const getUser = async function(user){
 
 // function that take the api data and displays it for the user
 const getUserData = function(){
-    getUser(userName.value).then(function(res){
-        if(userName.value === ''){
-            alert("Must Enter Username")
-        }
+    getUser('MarcusRobinson928').then(function(res){
+        // if(userName.value === ''){
+        //     alert("Must Enter Username")
+        // }
 
         for(let i = 0; i < res.userData.length; i++){
-            if(res.userData[i].payload.issue.user.login === userName.value){ 
+            if(res.userData[i].type === 'IssuesEvent'){ 
+                user = res.userData[i].payload.issue.user.login
                 repoName = res.userData[i].repo.name
                 issueNum = res.userData[i].payload.issue.number
                 issueTitle = res.userData[i].payload.issue.title
+                issueBody = res.userData[i].payload.issue.body
                 issueState = res.userData[i].payload.issue.state
                 issueDate = res.userData[i].payload.issue.created_at
+                console.log(user)
+                $('#user').html('User:' + user)
                 console.log(repoName)
                 console.log(issueNum)
                 console.log(issueTitle)
+                $('.card-title').html(issueTitle)
+                console.log(issueBody)
+                $('#body').html(issueBody)
                 console.log(issueState)
+                $('#state').html('Status:' + issueState)
                 console.log(issueDate)
                 }
             }
         })
     }
 
-submitButton.addEventListener('click', function(e){
-    e.preventDefault()
+$(document).ready( function(){
     getUserData()
-})
+ });
 
 $('#newItem').on('click', function () {
     $('#myModal').modal('toggle')
