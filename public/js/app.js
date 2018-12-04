@@ -50,5 +50,5 @@ $(document).ready( function(){
  });
 
 $('#newItem').on('click', function () {
-    $('#myModal').modal('toggle')
+    $('#myModal').modal(options)
 });

@@ -27,26 +27,14 @@
     </header>
     <main>
       <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input
-            type="email"
-            class="form-control"
-            id=inputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Enter email"
-          />
-          <small id="emailHelp" class="form-text text-muted"
-            >We'll never share your email with anyone else.</small
-          >
-        </div>
+        
 
         <div class="form-group">
           <label class="col-form-label" for="inputDefault">Username</label>
           <input
             type="text"
             class="form-control"
-            placeholder="Default input"
+            placeholder="Enter Username"
             id="inputUsername"
           />
         </div>
@@ -56,22 +44,11 @@
             type="password"
             class="form-control"
             id="inputPassword1"
-            placeholder="Password"
+            placeholder="Enter Password"
           />
         </div>
-        <div class="form-group">
-          <label for="inputPassword2"> Confirm Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="inputPassword2"
-            placeholder="Password"
-          />
-        </div>
-
-        <a href="/login" id="loginLink"> Already a user? Login </a>
-        <button type="submit" id="submit" class="btn btn-primary mx-auto">Submit</button>
-
+        <a href="/recovery" id="recoverLink"> Forgot Password? </a>
+        <button type="submit" class="btn btn-primary mx-auto">Submit</button>
  
       </form>
     </main>
@@ -81,6 +58,5 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
     ></script>
-    <script src="./js/oauth.js"></script>
   </body>
 </html>

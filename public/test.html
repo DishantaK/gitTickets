@@ -16,14 +16,35 @@
 </head>
 <body>
     
-    <!-- <div class="modal-container hide">
-         <div class="modal">
-            <h2>Compose new Tweet <span class="close-modal">x</span></h2>
-            <textarea id="text" maxlength="140" placeholder="What's happening?"></textarea>
-            <div id="counter"></div>
-            <button id="compose-tweet" class="tweet-button fire">Tweet</button>
-    </div> -->
+    <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#issueModal">
+    New Issue
+  </button>
 
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New Issue</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="app">
+    <div id="content">data will appear here</div>
+    <button id="display-btn">click</button>
+  </div>
 
 
 <!-- Mocha Info -->

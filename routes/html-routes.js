@@ -11,5 +11,8 @@ module.exports = function(app) {
     app.get('/gittix', function(req, res) {
         res.sendFile(path.join(__dirname, '../public/gitTix.html'));
     });
+    app.get('/login', function(req, res) {
+        res.sendFile(path.join(__dirname, '../public/login.html'));
+    });
 
 };
