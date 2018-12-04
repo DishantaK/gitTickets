@@ -1,5 +1,3 @@
-body {}
-
 nav {
     display: grid;
 }
@@ -18,13 +16,17 @@ header #logo{
     margin-left: -5px;
 }
 
-main {
-    width:70%;
-    margin: auto;
-    margin-top: 60px;
-
+section{
+    margin: 30px;
 }
-.btn-primary {
-    margin-top: 25px;
-    display: block;
+main {
+    width: 80%;
+    margin: auto;
+}
+.card{
+  margin-bottom: 20px;
+}
+
+.tags{
+  display: inline-block;
 }

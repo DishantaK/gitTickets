@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet " href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/minty/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/stylemain.css">
+    <title>gitTix</title>
+</head>
+<body>
+   <!-- Modal stays at the top. DO NOT REMOVE. Button click toggles visibility. can add more here as needed.-->
+    <div class="modal" id="mainModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">New Issue title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="commentTextarea">Comments</label>
+                    <textarea class="form-control" id="commentTextarea" rows="3"></textarea>
+                  </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    <!-- Begin Page -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <a class="navbar-brand" href="#" class="center"
+            ><img src="images/logowhite.png" id="logo" placeholder="gitTix"
+          /></a>
+        </nav>
+      </header>
+
+      <!-- ADD NEW ISSUE // TRIGGER MODAL -->
+      <section>
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mainModal" id="newItem">+ NEW TICKET</button>
+      </section>
+
+      <!-- Card/ Content section -->
+      <main>
+
+        <!-- Standard card example. New will be dynamically rendered.  Use block in .html() -->
+          <div class="card mx-auto">
+              <div class="card-body">
+                <h4 class="card-title">Got an Issue title here</h4>
+                <h6 class="card-subtitle mb-2 text-muted">Date created: Dec. 1, 2018</h6>
+                <p class="card-text">Comments render here. Bacon ipsum dolor amet burgdoggen flank t-bone tongue prosciutto beef ribs brisket chicken short loin picanha. Spare ribs filet mignon hamburger bacon doner meatloaf, tail burgdoggen rump tri-tip biltong  </p>
+                <div class="row">
+                    <a href="#" class="card-link col">Issue link</a>
+                    <div class="tags col">
+                        <span class="badge badge-primary">STATUS: OPEN</span>
+                        <span class="badge badge-info">USER: DISHANTAK</span>
+                        <span class="badge badge-danger">PRIORITY: HIGH</span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+        <!-- Standard card example. New will be dynamically rendered. Use block in .html() -->
+          <div class="card mx-auto">
+              <div class="card-body">
+                <h4 class="card-title">Got an Issue title here</h4>
+                <h6 class="card-subtitle mb-2 text-muted">Date created: Dec. 1, 2018</h6>
+                <p class="card-text">Comments render here. Bacon ipsum dolor amet burgdoggen flank t-bone tongue prosciutto beef ribs brisket chicken short loin picanha. Spare ribs filet mignon hamburger bacon doner meatloaf, tail burgdoggen rump tri-tip biltong  </p>
+                <div class="row">
+                    <a href="#" class="card-link col">Issue link</a>
+                    <div class="tags col">
+                        <span class="badge badge-primary">STATUS: OPEN</span>
+                        <span class="badge badge-info">USER: DISHANTAK</span>
+                        <span class="badge badge-danger">PRIORITY: HIGH</span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+        <!-- Standard card example. New will be dynamically rendered. Use block in .html() -->
+          <div class="card mx-auto">
+              <div class="card-body">
+                <h4 class="card-title">Got an Issue title here</h4>
+                <h6 class="card-subtitle mb-2 text-muted">Date created: Dec. 1, 2018</h6>
+                <p class="card-text">Comments render here. Bacon ipsum dolor amet burgdoggen flank t-bone tongue prosciutto beef ribs brisket chicken short loin picanha. Spare ribs filet mignon hamburger bacon doner meatloaf, tail burgdoggen rump tri-tip biltong  </p>
+                <div class="row">
+                    <a href="#" class="card-link col">Issue link</a>
+                    <div class="tags col">
+                        <span class="badge badge-primary">STATUS: OPEN</span>
+                        <span class="badge badge-info">USER: DISHANTAK</span>
+                        <span class="badge badge-danger">PRIORITY: HIGH</span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+      </main>
+
+
+      <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+      <script src="./js/app.js"></script>
+</body>
+</html>
