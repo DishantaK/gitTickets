@@ -1,8 +1,8 @@
-const db = require('../models/ticket.js');
+const dbTicket = require('../models/ticket.js');
 module.exports = function(app){
     app.get('/api/users', function(req, res){
         console.log('hit')
-        db.find({})
+        dbTicket.find({})
         .then(function(dbUsers){
             console.log(dbUsers)
             res.json(dbUsers);
@@ -13,7 +13,7 @@ module.exports = function(app){
         })
     })
     app.post('/api/users', function(req, res){
-        db.create(req.body)
+        dbTicket.create(req.body)
         .then(function(data){
             res.json(data);
         })

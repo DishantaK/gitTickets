@@ -1,7 +1,7 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const server = require('./server');
-const db = require('./models/ticket.js');
+const dbTicket = require('./models/ticket.js');
 const expect = chai.expect;
 
 // Setting up the chai http plugin. This plugin allows for HTTP integration testing with Chai assertions!
@@ -20,7 +20,7 @@ describe('GET /api/examples', function () {
 
   it('should find all examples', function (done) {
     //add some content to the now empty db
-    db.create({ issueName: 'this is a new issue',comments: 'this is the text for the new issue' })
+    dbTicket.create({ issueName: 'this is a new issue',comments: 'this is the text for the new issue' })
     .then(function (data) {
       console.log(data)
       //hit the POST('/api/users') endpoint
