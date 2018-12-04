@@ -26,6 +26,7 @@ const getUserData = function(){
                 issueBody = res.userData[i].payload.issue.body
                 issueState = res.userData[i].payload.issue.state
                 issueDate = res.userData[i].payload.issue.created_at
+                issueLink = res.userData[i].payload.issue.html_url
                 console.log(user)
                 $('#user').html('User:' + user)
                 console.log(repoName)
@@ -37,6 +38,8 @@ const getUserData = function(){
                 console.log(issueState)
                 $('#state').html('Status:' + issueState)
                 console.log(issueDate)
+                console.log(issueLink)
+                $('#link').html('<a href="' + issueLink + '" class="card-link col">Issue Link</a>');
                 }
             }
         })
