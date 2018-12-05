@@ -1,7 +1,7 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const server = require('./server');
-const db = require('./models');
+const dbUser = require('./models/user.js');
 const expect = chai.expect;
 
 // Setting up the chai http plugin
@@ -21,17 +21,18 @@ expect(function(){
 }).to.throw('Cannot use special symbols')
 })
 
-describe('GET /api/users', function() {
+
+describe('GET /api/user', function() {
   // Before each test begins, create a new request server for testing
   // & delete all examples from the db
   beforeEach(function() {
     request = chai.request(server);
-    return db.sequelize.sync({ force: true });
+    return dbUser.sequelize.sync({ force: true });
   });
 
   it('should find all users', function(done) {
     // Add some examples to the db to test with
-    db.User.bulkCreate([
+    dbUser.User.bulkCreate([
       { username: 'Sean', password: 'test' },
       { username: 'Dishanta', password: 'sample' },
       { username: 'Tisha', password: 'newPass' },
@@ -39,7 +40,7 @@ describe('GET /api/users', function() {
       { username: 'Matt', password: 'samplePass'}
     ]).then(function() {
       // Request the route that returns all examples
-      request.get('/api/users').end(function(err, res) {
+      request.get('/api/user').end(function(err, res) {
         let responseStatus = res.status;
         let responseBody = res.body;
 
@@ -82,7 +83,7 @@ describe('GET /api/users', function() {
 describe('POST /api/user', function() {
     beforeEach(function() {
       request = chai.request(server);
-      return db.sequelize.sync({ force: true });
+      return dbUser.sequelize.sync({ force: true });
     });
   
     it('should save an example', function(done) {
