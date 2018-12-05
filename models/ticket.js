@@ -7,7 +7,7 @@ const Schema = mongoose.Schema;
 const TicketSchema = new Schema({
   issueName: {
     type: String,
-    unique: true,
+    
     required: "You must include an item name"
   },
   comments: {

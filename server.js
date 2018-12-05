@@ -18,7 +18,7 @@ mongoose.connect('mongodb://localhost/addFinalDBINfoHere', { useNewUrlParser: tr
 
 // Routes
 // API Routes (require from routes file and pass in Express app)
-// require('./routes/api-routes')(app);
+require('./routes/api-routes')(app);
 // HTML Routes (require from routes file and pass in Express app)
 require('./config/passport');
 require('./models/user')
@@ -29,3 +29,5 @@ require('./routes/html-routes')(app);
 app.listen(PORT, function() {
   console.log(`App running on port ${PORT}`);
 });
+
+module.exports = app;

@@ -30,3 +30,18 @@ main {
 .tags{
   display: inline-block;
 }
+
+#sortSection{
+  display: inline-block;
+  
+}
+.fa-user-astronaut{
+    color: #fff;
+    
+}
+.fa-home{
+    color: #fff;
+}
+#titleTextarea {
+   margin-left: 5px;
+}
