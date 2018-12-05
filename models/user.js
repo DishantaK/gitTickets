@@ -1,5 +1,8 @@
 
 var mongoose = require('mongoose');
+const crypto = require('crypto');
+
+
 var UserSchema = new mongoose.Schema({
   email: {
     type: String,
@@ -20,8 +23,20 @@ var UserSchema = new mongoose.Schema({
   },
   passwordConf: {
     type: String,
-    required: true,
   }
 });
-var user = mongoose.model('newUser', UserSchema);
+
+UserSchema.methods.setPassword = function(password) {
+  this.salt = crypto.randomBytes(16).toString('hex');
+  this.hash = crypto.pbkdf2Sync(password, this.salt, 10000, 512, 'sha512').toString('hex');
+};
+
+UserSchema.methods.validatePassword = function(password) {
+  const hash = crypto.pbkdf2Sync(password, this.salt, 10000, 512, 'sha512').toString('hex');
+  return this.hash === hash;
+};
+
+var user = mongoose.model('user', UserSchema);
+
+
 module.exports = user;
