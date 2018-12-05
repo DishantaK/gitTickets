@@ -30,8 +30,16 @@
     <div class="modal" id="mainModal">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">New Issue title</h5>
+            <div class="modal-header">
+               
+              <!-- <h6 class="modal-title">Title</h6> -->
+            
+            <!-- <h5 class="modal-title">New Issue title</h5> -->
+             <label for="commentTextarea">Title</label>
+            <textarea class="form-control"
+            id="titleTextarea"
+            rows="1"
+            ></textarea>
             <button
               type="button"
               class="close"
@@ -68,9 +76,12 @@
     <!-- Begin Page -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#" class="center"
+          <a href="/"><i class="fas fa-home fa-2x"></i></a>
+          <a class="navbar-brand" href="#" class="center"
           ><img src="images/logowhite.png" id="logo" placeholder="gitTix"
         /></a>
+
+        <i class="fas fa-user-astronaut fa-3x"></i>
       </nav>
     </header>
 
