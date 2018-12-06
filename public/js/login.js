@@ -39,11 +39,40 @@ console.log(userLogin)
                     });
             }   
 
-            const existingUserLogin = function () {
+            // const existingUserLogin = function () {
 
-                $.ajax({ url: "/api/user", method: "GET" })
-                    .then(function () {
-                        res.redirect(window.location.replace('/gittix'))
-                    });
-            }
+            //     $.ajax({ url: "/api/user", method: "GET" })
+            //         .then(function () {
+            //             res.redirect(window.location.replace('/gittix'))
+            //         });
+            // }
     })
+
+    $('#submitExistingUser').on('click', function (event) {
+        event.preventDefault();
+        const userLogin = {
+            username: $('#inputUsername').val().trim(),
+            password: $('#inputPassword1').val().trim(), 
+        };
+
+        for (let key in userLogin) {
+            if (userLogin[key] === '') {
+                alert('Username or Password not valid!');
+                return;
+            }
+        }
+                $.ajax({
+                    url: '/api/user',
+                    method: 'GET',
+                    data: userLogin
+                }).then(
+                    function (data) {
+                        if (data.success === false) {
+                            alert('There was a problem with your submission. Please check your entry and try again.');
+                        }
+                        else {
+                            window.location.href = '/gittix'
+                        }
+                    });
+            }   
+    )
