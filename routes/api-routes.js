@@ -16,10 +16,12 @@ module.exports = function(app){
     app.post('/api/users', function(req, res){
         dbTicket.create(req.body)
         .then(function(data){
+
             res.json(data);
         })
         .catch(function(err){
             res.json(err);
         })
     })
+   
 }

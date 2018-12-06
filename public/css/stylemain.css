@@ -30,3 +30,7 @@ main {
 .tags{
   display: inline-block;
 }
+
+#titleTextarea {
+    margin-left: 5px;
+ }
