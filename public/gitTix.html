@@ -30,6 +30,9 @@
     <div class="modal" id="mainModal">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
+          <div class="modal-header">
+              <label for="titleTextarea">Title</label>
+            <!-- <h6 class="modal-title">Title</h6> -->
             <div class="modal-header">
                
               <!-- <h6 class="modal-title">Title</h6> -->
@@ -60,7 +63,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" id="save" class="btn btn-primary">Save changes</button>
             <button
               type="button"
               class="btn btn-secondary"
@@ -115,31 +118,14 @@
       <!--
         Standard card example. New will be dynamically rendered.  Use block in .html()
       -->
+      <div class="center-feed">
 
-      <div class="card mx-auto">
-        <div class="card-body">
-          <h4 class="card-title" id="title"></h4>
-          <h6 class="card-subtitle mb-2 text-muted">
-            Date created: Dec. 1, 2018
-          </h6>
-          <p class="card-text" id="body"></p>
-          <div class="row">
-            <div id="link"></div>
-            <div class="tags col">
-              <span class="badge badge-primary" id="state"></span>
-              <span class="badge badge-info" id="user"></span>
-              <span class="badge badge-danger">PRIORITY: HIGH</span>
-            </div>
-          </div>
-        </div>
       </div>
+
+      
     </main>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
       integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"

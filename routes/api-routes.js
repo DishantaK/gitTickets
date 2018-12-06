@@ -1,8 +1,31 @@
 
+const dbTicket = require('../models/ticket.js');
+module.exports = function(app){
+    app.get('/api/users', function(req, res){
+        console.log('hit')
+        dbTicket.find({})
+        .then(function(dbUsers){
+            console.log(dbUsers)
+            res.json(dbUsers);
+        })
+        .catch(function(err){
+            console.log(err);
+            res.json(err)
+        })
+    })
+    app.post('/api/users', function(req, res){
+        dbTicket.create(req.body)
+        .then(function(data){
+
+            res.json(data);
+        })
+    })
+   
+}
 const dbUser = require('../models/user.js');
 
 // Routes for User Login
-module.exports = function (app) {
+
 console.log('route loaded')
     // GET request: Route for retrieving user from the database.
     app.get('/api/user', function (req, res) { //Works
@@ -42,6 +65,7 @@ console.log('route loaded')
         })
         .catch(function (err) {
             res.json(err);
+       
         });}
         console.log('------Adding to user in mongo');  
     });
