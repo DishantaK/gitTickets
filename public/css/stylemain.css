@@ -45,3 +45,13 @@ main {
 #titleTextarea {
    margin-left: 5px;
 }
+
+#icon{
+    margin-left: 90%;
+    color: green;
+    /* font-size: 45px; */
+}
+
+#link{
+    margin-left: 30px
+}

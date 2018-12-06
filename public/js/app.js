@@ -29,33 +29,35 @@ const getUserData = function(){
                 date = `${month} ${day}, ${year}`
                 issueLink = res.userData[i].html_url
                 $('.container').append(`
-                <div class="card mx-auto">
-              <div class="card-body">
-                <h4 class="card-title">${issueTitle}</h4>
-                <h6 class="card-subtitle mb-2 text-muted">Date created: ${date}</h6>
-                <p class="card-text">${issueBody}</p>
-                <div class="row">
-                <div>
-                <a href='${issueLink}'>Issue Link</a>
-                </div>
-                <div id="icon">
-                </div>
-                    <div class="tags col">
-                        <span class="badge badge-primary">${issueState}</span>
-                        <span class="badge badge-info">${user}</span>
-                        <span class="badge badge-danger">PRIORITY: HIGH</span>
+                <div class="card mx-auto" id="id:${issueId}">
+                <div class="card-body">
+                    <h4 class="card-title">${issueTitle}</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">Date created: ${date}</h6>
+                    <div id="icon"></div>
+                    <p class="card-text">${issueBody}</p>
+                    <div class="row">
+                    <div id="link">
+                    <a href='${issueLink}'>Issue Link</a>
                     </div>
-                  </div>
-              </div>
-              <script>
-              if(issueState === 'closed'){
+                    </div>
+                        <div class="tags col">
+                            <span class="badge badge-primary">${issueState}</span>
+                            <span class="badge badge-info">${user}</span>
+                            <span class="badge badge-danger">PRIORITY: HIGH</span>
+                        </div>
+                    </div>
+                </div>
+            `)
+            if(issueState === 'closed'){
+                id = document.getElementById(`id:${issueId}`).id
+                console.log(id)
                 $('#icon').append('<i class="fas fa-check" id="check"></i>')
             }
-            </script>
-            `)
             }
         })
     }
+
+
 
 $(document).ready( function(){
     getUserData()
