@@ -31,11 +31,11 @@ main {
   display: inline-block;
 }
 
-<<<<<<< HEAD
+
 #titleTextarea {
     margin-left: 5px;
  }
-=======
+
 #sortSection{
   display: inline-block;
   
@@ -47,7 +47,5 @@ main {
 .fa-home{
     color: #fff;
 }
-#titleTextarea {
-   margin-left: 5px;
-}
->>>>>>> 95bf9542d3ea480f9afff0c83f6a7e14f4e75e24
+
+
