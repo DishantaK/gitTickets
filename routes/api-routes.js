@@ -1,6 +1,7 @@
 
 const dbTicket = require('../models/ticket.js');
 module.exports = function(app){
+
     app.get('/api/users', function(req, res){
         console.log('hit')
         dbTicket.find({})
@@ -76,7 +77,6 @@ console.log('route loaded')
         request.logout();
         response.redirect('/login');
     });
-
 
 
 }
