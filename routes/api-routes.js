@@ -1,6 +1,7 @@
 
 const dbTicket = require('../models/ticket.js');
 module.exports = function(app){
+
     app.get('/api/users', function(req, res){
         console.log('hit')
         dbTicket.find({})
@@ -21,7 +22,7 @@ module.exports = function(app){
         })
     })
    
-}
+
 const dbUser = require('../models/user.js');
 
 // Routes for User Login
@@ -77,5 +78,4 @@ console.log('route loaded')
         response.redirect('/login');
     });
 
-
-
+}
