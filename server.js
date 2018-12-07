@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // Connect to the Mongo DB using the inventorymaster database (will be created if it doesn't exist)
-mongoose.connect('mongodb://localhost/addFinalDBINfoHere', { useNewUrlParser: true });
+mongoose.connect('mongodb://gittixAdmin:G123456@ds121814.mlab.com:21814/heroku_dds4jlht', { useNewUrlParser: true });
 
 // Routes
 // API Routes (require from routes file and pass in Express app)
@@ -24,10 +24,14 @@ require('./config/passport');
 require('./models/user')
 require('./routes/api-routes')(app)
 require('./routes/html-routes')(app);
+var dotenv = require('dotenv');
 
+dotenv.config();
+
+var url = process.env.MONGOLAB_URI;
 // Start the server
 app.listen(PORT, function() {
   console.log(`App running on port ${PORT}`);
 });
-
-module.exports = app;
+//Use only for testing
+// module.exports = app;

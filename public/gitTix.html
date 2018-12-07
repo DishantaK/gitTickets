@@ -27,57 +27,55 @@
     <!--
       Modal stays at the top. DO NOT REMOVE. Button click toggles visibility. can add more here as needed.
     -->
+    
     <div class="modal" id="mainModal">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
             <div class="modal-header">
-               
+                <label for="titleTextarea">Title</label>
               <!-- <h6 class="modal-title">Title</h6> -->
-            
-            <!-- <h5 class="modal-title">New Issue title</h5> -->
-             <label for="commentTextarea">Title</label>
-            <textarea class="form-control"
-            id="titleTextarea"
-            rows="1"
-            ></textarea>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="commentTextarea">Comments</label>
-              <textarea
-                class="form-control"
-                id="commentTextarea"
-                rows="3"
+              <textarea class="form-control"
+              id="titleTextarea"
+              rows="1"
               ></textarea>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="commentTextarea">Comments</label>
+                <textarea
+                  class="form-control"
+                  id="commentTextarea"
+                  rows="3"
+                ></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="save" class="btn btn-primary">Save changes</button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
     <!-- Begin Page -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-          <a href="/"><i class="fas fa-home fa-2x"></i></a>
-          <a class="navbar-brand" href="#" class="center"
+        <a href="/"><i class="fas fa-home fa-2x"></i></a>
+        <a class="navbar-brand" href="/" class="center"
           ><img src="images/logowhite.png" id="logo" placeholder="gitTix"
         /></a>
 
@@ -97,17 +95,27 @@
         + NEW TICKET
       </button>
       <div id="sortSection">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Filter / Sort : </a>
-      <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
+        <a
+          class="nav-link dropdown-toggle"
+          data-toggle="dropdown"
+          href="#"
+          role="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >Filter / Sort :
+        </a>
+        <div
+          class="dropdown-menu"
+          x-placement="bottom-start"
+          style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);"
+        >
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
       </div>
-    </div>
-
-
     </section>
 
     <!-- Card/ Content section -->
@@ -118,13 +126,10 @@
 
       <div class="container">
       </div>
+      <div class="center-feed"></div>
     </main>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
       integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
