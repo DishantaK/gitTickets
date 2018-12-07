@@ -31,9 +31,12 @@ main {
   display: inline-block;
 }
 
+
+
 #titleTextarea {
     margin-left: 5px;
  }
+
 #sortSection{
   display: inline-block;
   
@@ -45,6 +48,10 @@ main {
 .fa-home{
     color: #fff;
 }
-/* #titleTextarea {
-   margin-left: 5px;
-} */
+
+
+#modalComments {
+    width: 80%;
+    margin-left: 15px;
+}
+

@@ -31,18 +31,18 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-              <label for="titleTextarea">Title</label>
-            <!-- <h6 class="modal-title">Title</h6> -->
-            <div class="modal-header">
-               
-              <!-- <h6 class="modal-title">Title</h6> -->
             
-            <!-- <h5 class="modal-title">New Issue title</h5> -->
-             <label for="commentTextarea">Title</label>
-            <textarea class="form-control"
-            id="titleTextarea"
-            rows="1"
-            ></textarea>
+            <div class="form-group">
+              <label class="col-form-label" for="inputDefault"
+                >Default input</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Default input"
+                id="inputDefault"
+              />
+            </div>
             <button
               type="button"
               class="close"
@@ -52,18 +52,16 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="commentTextarea">Comments</label>
-              <textarea
-                class="form-control"
-                id="commentTextarea"
-                rows="3"
-              ></textarea>
-            </div>
+          <div class="form-group" id="modalComments">
+            <label for="exampleTextarea">Example textarea</label>
+            <textarea
+              class="form-control"
+              id="exampleTextarea"
+              rows="3"
+            ></textarea>
           </div>
           <div class="modal-footer">
-            <button type="button" id="save" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
             <button
               type="button"
               class="btn btn-secondary"
@@ -79,8 +77,8 @@
     <!-- Begin Page -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-          <a href="/"><i class="fas fa-home fa-2x"></i></a>
-          <a class="navbar-brand" href="#" class="center"
+        <a href="/"><i class="fas fa-home fa-2x"></i></a>
+        <a class="navbar-brand" href="#" class="center"
           ><img src="images/logowhite.png" id="logo" placeholder="gitTix"
         /></a>
 
@@ -100,17 +98,27 @@
         + NEW TICKET
       </button>
       <div id="sortSection">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Filter / Sort : </a>
-      <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
+        <a
+          class="nav-link dropdown-toggle"
+          data-toggle="dropdown"
+          href="#"
+          role="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >Filter / Sort :
+        </a>
+        <div
+          class="dropdown-menu"
+          x-placement="bottom-start"
+          style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);"
+        >
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
       </div>
-    </div>
-
-
     </section>
 
     <!-- Card/ Content section -->
@@ -118,11 +126,7 @@
       <!--
         Standard card example. New will be dynamically rendered.  Use block in .html()
       -->
-      <div class="center-feed">
-
-      </div>
-
-      
+      <div class="center-feed"></div>
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
