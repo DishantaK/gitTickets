@@ -80,7 +80,7 @@ var date_sort_desc = function(date1, date2) {
 // More info about array sorting: http://w3schools.com/jsref/jsref_sort.asp
 
 // First let's sort the array in ascending order.
-dates.sort(date_sort_asc);
+// dates.sort(date_sort_asc);
 
 // Now let's output the results to the page to show that the dates are now
 // sorted in ascending order.
@@ -106,3 +106,17 @@ db.sort(function(a,b) {
 
 var userQuery = new Parse.Query(Parse.db);
 userQuery.ascending("createdAt");
+
+
+GET /items?q=resolved:false && price:[10 TO 100]
+
+var datum = new Date(Date.UTC('2009','01','13','23','31','30'));
+ console.log(datum.getTime()/1000);
+
+db.date.sort(function(a, b)
+{
+    return b - a;
+});
+
+// with drop down menu if date is selceted request data in form of soerted bu date. with the get method.
+//
