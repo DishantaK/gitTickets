@@ -52,6 +52,17 @@ main {
     width: 80%;
     margin-left: 15px;
 }
+
+#icon{
+    margin-left: 90%;
+    color: green;
+    /* font-size: 45px; */
+}
+
+#link{
+    margin-left: 30px
+}
+
 .userprofilename {
     margin-top: 25px;
 }
@@ -61,3 +72,4 @@ main {
 @media only screen and (max-width) {
 
 }
+
