@@ -21,7 +21,7 @@ module.exports = function(app){
         })
     })
    
-}
+
 const dbUser = require('../models/user.js');
 
 // Routes for User Login
@@ -79,3 +79,4 @@ console.log('route loaded')
 
 
 
+}
