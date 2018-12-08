@@ -74,6 +74,32 @@
       </div>
     </div>
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 id = "userEmail" class="modal-title" id="exampleModalLabel">User Profile</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id = "modaluser" type="password" class="modal-body">
+                <label class="col-form-label" for="inputDefault"
+                >Default input</label
+              >
+            </div>
+            <div id = "modalbody"type="password" class="modal-body">
+                <label for="modalbody" >Comments</label>
+             
+            </div>
+            <div class="modal-footer">
+            
+              <button id = "logout" type="button" class="btn btn-primary">Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- Begin Page -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -82,7 +108,7 @@
           ><img src="images/logowhite.png" id="logo" placeholder="gitTix"
         /></a>
 
-        <i class="fas fa-user-astronaut fa-3x"></i>
+        <i class="fas fa-user-astronaut fa-3x"  class="btn btn-primary" id="user-info" data-toggle="modal" data-target="#exampleModal"></i>
       </nav>
     </header>
 
@@ -140,7 +166,7 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
-
+    <script src="/js/login.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>

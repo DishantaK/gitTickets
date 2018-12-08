@@ -70,6 +70,21 @@ console.log('route loaded')
         console.log('------Adding to user in mongo');  
     });
 
+    app.put("/api/user", function(req, res) {
+        // Update takes in two arguments, an object describing the properties we want to update,
+        // and another "where" object describing the todos we want to update
+        dbUser.update({
+          password: req.body.password,
+        }, {
+          where: {
+            id: req.body.id
+          }
+        })
+          .then(function(dbTodo) {
+            res.json(dbTodo);
+          });
+    
+      });
 
     // GET request: returns user to login page
     app.get('/logout', function (request, response) {
