@@ -35,9 +35,9 @@ $('#submitUser').on('click', function (event) {
                     alert('There was a problem with your submission. Please check your entry and try again.');
                 }
                 else {
-                    localStorage.setItem('email', email)
+                  
                     localStorage.setItem('username', userLogin.username)
-                    localStorage.setItem('password', password)
+                    localStorage.setItem('password', userLogin.password)
                     window.location.href = '/gittix';
                 }
 
