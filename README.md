@@ -7,7 +7,7 @@ This project can be accessed using heroku at https://gittix.herokuapp.com/ and h
 
 ## Authors
 
-* **Dishanta Kpatrick** - *ReadMe, UI, Logo, DB setup - mongo / mongoose models, deployment, Nodemailer password recovery, * - [DishantaK](https://github.com/DishantaK)
+* **Dishanta Kpatrick** - *ReadMe, UI, Logo, DB setup - mongo / mongoose models, deployment, Nodemailer password recovery * - [DishantaK](https://github.com/DishantaK)
 * **Sean Hance** - *User profile/ login system - mongo/passportjs* - [Seanders-Hancevic](https://github.com/Seanders-Hancevic)
 * **Marcus Robinson** - *External API - get/add issues to GitHub* - [MarcusRobinson928](https://github.com/MarcusRobinson928)
 * **Tisha Tallman** - *Ticket Modal - rendering ticket to page* - [tallmanlaw](https://github.com/tallmanlaw)
