@@ -2,7 +2,7 @@ const userName = document.getElementById('inputUsername')
 const issues = document.getElementById('data')
 const client_id = 'Iv1.60760d2b9e87f926';
 const client_secret = '5159f5c2bc3db0d29718cea17281df1b9646ad16';
-
+const usericon = localStorage.getItem('username')
 // api call to gitHub to get users data
 const getUser = async function (user) {
     api_call = await fetch(`https://api.github.com/users/${user}/events?client_id=${client_id}&client_secret=${client_secret}`);
@@ -105,7 +105,7 @@ const render = function (data) {
       <div id="link">${`<a href="https://github.com/DishantaK/gitTickets" class="card-link col">Issue Link</a>`}</div>
       <div class="tags col">
         <span class="badge badge-primary" id="state">OPEN</span>
-        <span class="badge badge-info" id="user">USER</span>
+        <span class="badge badge-info" id="user">${usericon}</span>
         <span class="badge badge-danger">HIGH</span>
       </div>
     </div>
