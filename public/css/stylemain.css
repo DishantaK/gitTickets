@@ -1,17 +1,17 @@
 nav {
-    display: grid;
+   
+    
 }
 nav a {
-    align-self: center;
-    justify-self: center;
+   
     width: 30%;
     display: block;
-    margin: auto;
+   
 }
 .navbar-brand {
     margin: auto;
     justify-self: center;
-    margin-left: -8px;
+    
     
 }
 header #logo{
@@ -51,11 +51,14 @@ main {
     
 }
 .home {
-    display: inline-block;
-    width: 20%;
+    
+    
+   
 }
 .fa-home{
     color: #fff;
+
+    
    
 }
 
@@ -70,19 +73,5 @@ main {
 
 
 @media only screen and (max-width: 700px) {
-    nav {
-        width: 100%;
-        margin: 0px;
-    }
-    nav a, .fa-user-astronaut {
-        width: 100%;
-        text-align: center;
-        align-items: center;
-    }
-    nav a:hover, .fa-user-astronaut:hover {
-        cursor: pointer;
-    }
-    header {
-        padding: 0px;
-    }
+   
 }
