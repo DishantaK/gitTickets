@@ -4,15 +4,21 @@ nav {
 nav a {
     align-self: center;
     justify-self: center;
-    width: 50%;
+    width: 30%;
     display: block;
     margin: auto;
 }
+.navbar-brand {
+    margin: auto;
+    justify-self: center;
+    margin-left: -8px;
     
+}
 header #logo{
     width: 85px;
     height: 55px;
     margin: auto;
+    
     
 }
 
@@ -50,7 +56,7 @@ main {
 }
 .fa-home{
     color: #fff;
-    
+   
 }
 
 #modalComments {
