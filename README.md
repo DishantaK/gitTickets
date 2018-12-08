@@ -3,77 +3,31 @@ Issue manager built with NodeJS, Express, and Mongodb - Integrates w/ Github API
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+This project can be accessed using heroku at https://gittix.herokuapp.com/ and https://gittix.herokuapp.com/gittix to see the main ticket page
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Dishanta Kpatrick** - *ReadMe, UI, Logo, DB setup - mongo / mongoose models, deployment, Nodemailer password recovery, * - [DishantaK](https://github.com/DishantaK)
+* **Sean Hance** - *User profile/ login system - mongo/passportjs* - [Seanders-Hancevic](https://github.com/Seanders-Hancevic)
+* **Marcus Robinson** - *External API - get/add issues to GitHub* - [MarcusRobinson928](https://github.com/MarcusRobinson928)
+* **Tisha Tallman** - *Ticket Modal - rendering ticket to page* - [tallmanlaw](https://github.com/tallmanlaw)
+* **Matt Gredler** - *Ticket Sort - filtering by date / completion* - [MattGredler](https://github.com/MattGredler)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/DishantaK/gitTickets/graphs/contributors) who participated in this project.
 
-## License
+## Built With // Dependencies
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* [ExpressJS](http://expressjs.com/) - The web framework used
+* [NodeJS](https://nodejs.org/en/) - Server
+* [PassportJS](https://maven.apache.org/) - Dependency Management
+* [Bootstrap](https://getbootstrap.com/) - front-end component library.
+* [Bootswatch](https://bootswatch.com/) - Bootstrap Styles
+* [Mongoose](https://mongoosejs.com//) - MongoDB ODM
+* [BodyParser](https://www.npmjs.com/package/body-parser) - Node.js body parsing middleware.
+* [NodeMailer](https://nodemailer.com/about/) - Nodemailer is a module for Node.js to send emails.
+
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Hat tip our instructional team at GATech
+
