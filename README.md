@@ -29,5 +29,5 @@ See also the list of [contributors](https://github.com/DishantaK/gitTickets/grap
 
 ## Acknowledgments
 
-* Hat tip our instructional team at GATech
+* Hat tip our instructional team at GATech!
 
