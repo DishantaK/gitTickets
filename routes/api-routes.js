@@ -1,4 +1,4 @@
-
+const request = require('superagent')
 const dbTicket = require('../models/ticket.js');
 module.exports = function(app){
     app.get('/api/users', function(req, res){
@@ -92,6 +92,38 @@ console.log('route loaded')
         response.redirect('/login');
     });
 
+    app.get('/user/signin/callback', function(req, res, next){
+        const {query} = req;
+        const {code} = query;
 
+        if(!code){
+            return res.send({
+                success: false,
+                message: 'Error: Not Successful'
+            });
+        }
+        request
+        .post('https://github.com/login/oauth/access_token')
+        .send({ client_id: 'e65135e5a281077fec97',
+        client_secret: '68e34c43178054e42b1867ee1257b37d13c85892',
+        code: code 
+        })
+        .set('Accept', 'application/json')
+        .then(function(result) {
+           const data = result.body;
+           console.log(data)
+           res.redirect('/gittix');
+        });
+    })
 
+    app.get('/user/', function(req, res, next){
+        const accessToken = 'd29726953912c43be5eb0dc01c7bdb6788818440';
+
+        request
+   .get(`https://api.github.com/user?access_token=${accessToken}`)
+   .set('Authorization', 'token' + accessToken)
+   .then(function(result) {
+    res.send(result.body)
+   });
+    })
 }
