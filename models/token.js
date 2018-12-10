@@ -1,4 +1,7 @@
 // Using the Schema constructor, create a new TokenSchema object
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
 const TokenSchema = new Schema({
     accessToken: {
         type: String,
@@ -8,4 +11,4 @@ const TokenSchema = new Schema({
 var Token = mongoose.model('Token', TokenSchema);
 
 
-module.exports = Toke
+module.exports = Token
