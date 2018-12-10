@@ -126,4 +126,53 @@ console.log('route loaded')
     res.send(result.body)
    });
     })
+
+    app.get('/user/signin/callback', function(req, res, next){
+        const {query} = req;
+        const {code} = query;
+
+        if(!code){
+            return res.send({
+                success: false,
+                message: 'Error: Not Successful'
+            });
+        }
+        request
+        .post('https://github.com/login/oauth/access_token')
+        .send({ 
+        client_id: 'e65135e5a281077fec97',
+        client_secret: '68e34c43178054e42b1867ee1257b37d13c85892',
+        code: code
+        })
+        .set('Accept', 'application/json')
+        .then(function(result) {
+           const data = result.body.access_token;
+           console.log(data)
+           dbToken.create({
+            accessToken: data,
+})
+        });
+        res.redirect('/gittix');
+    })
+
+    app.get('/token', function(req, res){
+        dbToken.findOne().sort({_id:-1}).limit(1)
+        .then(function(token){
+            let access = token.accessToken
+            res.send(access)
+        })
+    })
+
+    app.get('/user', function(req, res){
+        dbToken.findOne().sort({_id:-1}).limit(1)
+        .then(function(token){
+            let access = token.accessToken
+            request
+       .get(`https://api.github.com/user?access_token=${access}`)
+       .set('Authorization', 'token' + access)
+       .then(function(result) {
+        res.send(result.body)
+       });
+        })
+    })
 }
