@@ -1,5 +1,6 @@
 const request = require('superagent')
 const dbTicket = require('../models/ticket.js');
+const dbToken = require('../models/token.js')
 module.exports = function(app){
     app.get('/api/users', function(req, res){
         console.log('hit')
