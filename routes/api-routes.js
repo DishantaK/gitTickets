@@ -31,19 +31,16 @@ module.exports = function(app){
     // GET request: Route for retrieving user from the database.
     app.get('/api/user', function (req, res) { //Works
         console.log('--------retrieving---------');
-        let success;
-        const existingUsers = dbUser.find({ username: req.body.username, password: req.body.password })
-        if (existingUsers.length === 0) {
-            res.send({ success: true })
-            console.log(existingUsers)
-        }
-        else {
-            res.send('Incorrect Username or Password')
-                .catch(function (err) {
-                    console.log(err)
-                    res.json("User does not exist");
-                });
-        }
+
+        dbUser.findOne({username: req.body.username, password: req.body.password})
+            .then(function (dbUser) { 
+                // if(dbUser.length > 0){
+                res.send({success: true})
+                console.log(dbUser)
+            //     res.redirect('/gittix');
+            // } else{
+            //     res.send('Incorrect Username or Password')
+            // }
 
     });
 

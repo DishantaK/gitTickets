@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet "
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/minty/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>gitTix - Login or Signup</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#" class="center"
+          ><img src="images/logowhite.png" id="logo" placeholder="gitTix"
+        /></a>
+      </nav>
+    </header>
+    <main id="mainForgot">
+        <h1> Password Update</h1>
+        <form method ="POST" action="sendRecover">
+        
+            <div class="form-group">
+                    <label for="emailRecover">Enter Email address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="emailRecover"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter email"
+                    />
+        <div class="form-group">
+          <label class="col-form-label" for="usernameRecover">Current Username</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Username"
+            id="usernameRecover"
+          />
+        </div>
+       
+  
+        <button id = "submitRecover"type="submit" class="btn btn-primary mx-auto" >Recover</button>
+ 
+      </form>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/login.js"></script>
+  </body>
+</html>
+
