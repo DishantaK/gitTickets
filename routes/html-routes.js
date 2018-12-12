@@ -17,5 +17,8 @@ module.exports = function(app) {
     app.get('/recovery', function(req, res) {
         res.sendFile(path.join(__dirname, '../public/forgot.html'));
     });
+    app.get('/update', function(req, res) {
+        res.sendFile(path.join(__dirname, '../public/update.html'));
+    });
 
 };

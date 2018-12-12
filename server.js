@@ -33,21 +33,21 @@ app.post('/sendRecover', function(req, res){
       from: '"gitTix Manager" <gittixcontact@dishantak.com>', // sender address
       to: 'contactgittix@gmail.com', // list of receivers
       subject: 'gittix - Password Recovery ', // Subject line
-      text: `Password Recovery ${req.body.username}`, // plain text body
+      text: `Password Recovery`, // plain text body
       html: `
 
         <h1> gitTix - Password Recovery</h1>
-        <h2> For: ${req.body.username} </h2>
-        <a href="/update"> Click Here to Update your password on gitTix</a>
+        <h2> If you did not request this this email, please diregard</h2>
+        <a href="https://gittix.herokuapp.com/update"> Click Here to update your password on gitTix</a>
       
       ` // html body
     };
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         console.log(error);
-        res.status(400).send({success: false})
+        res.send(`Nah, that's not happening :  <a href="/recover">Try again? </a>`);
       } else {
-        res.status(200).send({success: true});
+        res.send(`Email Sent :  <a href="/">Go Home? </a>`);
       }
     })
   
