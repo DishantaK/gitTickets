@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-
+var nodeMailer = require('nodemailer');
 // Set the port to 3000 OR let the process set the port (if deployed to Heroku)
 const PORT = process.env.PORT || 3000;
 
@@ -12,6 +12,53 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 // Use express.static to serve the public folder as a static directory
 app.use(express.static('public'));
+
+
+app.post('/sendRecover', function(req, res){
+    console.log(`post works`);
+ 
+    var transporter = nodeMailer.createTransport({
+      host: 'smtp.zoho.com',
+      port: 465,
+      secure: true,  //true for 465 port, false for other ports
+      auth: {
+        user: 'gittixcontact@dishantak.com',
+        pass: 'Gdishanta$7'
+      },
+      tls: {
+        rejectUnauthorized: false
+      }
+    });
+    var mailOptions = {
+      from: '"gitTix Manager" <gittixcontact@dishantak.com>', // sender address
+      to: 'contactgittix@gmail.com', // list of receivers
+      subject: 'gittix - Password Recovery ', // Subject line
+      text: `Password Recovery ${req.body.username}`, // plain text body
+      html: `
+
+        <h1> gitTix - Password Recovery</h1>
+        <h2> For: ${req.body.username} </h2>
+        <a href="/update"> Click Here to Update your password on gitTix</a>
+      
+      ` // html body
+    };
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log(error);
+        res.status(400).send({success: false})
+      } else {
+        res.status(200).send({success: true});
+      }
+    })
+  
+  
+
+});
+
+
+
+
+
 
 // Connect to the Mongo DB using the inventorymaster database (will be created if it doesn't exist)
 mongoose.connect('mongodb://gittixAdmin:G123456@ds121814.mlab.com:21814/heroku_dds4jlht', { useNewUrlParser: true });
