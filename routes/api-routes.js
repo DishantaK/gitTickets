@@ -33,13 +33,13 @@ console.log('route loaded')
         console.log('--------retrieving---------');
         dbUser.findOne({username: req.body.username, password: req.body.password})
             .then(function (dbUser) { 
-                // if(dbUser.length > 0){
+                if(dbUser.length > 0){
                 res.send({success: true})
                 console.log(dbUser)
             //     res.redirect('/gittix');
-            // } else{
-            //     res.send('Incorrect Username or Password')
-            // }
+            } else{
+                res.send('Incorrect Username or Password')
+            }
 
             })
             .catch(function (err) {

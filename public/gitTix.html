@@ -71,39 +71,44 @@
         </div>
       </div>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 id = "userEmail" class="modal-title" id="exampleModalLabel">User Profile</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div id = "modaluser" type="password" class="modal-body">
-                <label class="col-form-label" for="inputDefault"
-                >Default input</label
-              >
-            </div>
-            <div id = "modalbody"type="password" class="modal-body">
-                <label for="modalbody" >Comments</label>
-             
-            </div>
-            <div class="modal-footer">
-            
-              <button id = "logout" type="button" class="btn btn-primary">Logout</button>
+      <div class="modal fade disappear" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 id="userEmail" class="modal-title" id="exampleModalLabel">User Profile</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div id="modaluser" type="password" class="modal-body">
+                <label class="col-form-label" for="inputDefault">Default input</label>
+              </div>
+              <div id="modalbody" type="password" class="modal-body">
+                <label for="modalbody">Comments</label>
+               </div>
+              <div id="changePass-one" class="modal-body">
+          
+                </div>
+                <div id="changePass-two" class="modal-body">
+                
+                  </div>
+                  <div id="changePassword" class="modal-body">
+                
+                    </div>
+              <div class="modal-footer">
+                <button id="changePass" type="button" class="btn btn-primary">Change Password</button>
+                <button id="log-out" type="button" class="btn btn-primary log-out">Logout</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
     <!-- Begin Page -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary .flex-column">
-        <a href="/"><i class="fas fa-home fa-2x d-flex justify-content-start"></i></a>
-        <a class="navbar-brand justify-content-center" href="/"
-          ><img src="images/logowhite.png" id="logo" placeholder="gitTix"
-        /></a>
+     <!-- Begin Page -->
+  <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class = "log-out"><i class="fas fa-home fa-2x"></i></a>
+        <a class="navbar-brand log-out"  class="center"><img src="images/logowhite.png" id="logo" placeholder="gitTix" /></a>
 
         <i class="fas fa-user-astronaut fa-3x justify-content-end"  class="btn btn-primary" id="user-info" data-toggle="modal" data-target="#exampleModal"></i>
       </nav>

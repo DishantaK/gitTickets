@@ -10,6 +10,7 @@ $('#submitUser').on('click', function (event) {
     };
     console.log(userLogin)
 
+
     for (let key in userLogin) {
         if (userLogin[key] === '') {
             alert('Username or Password not valid!');
@@ -35,7 +36,7 @@ $('#submitUser').on('click', function (event) {
                     alert('There was a problem with your submission. Please check your entry and try again.');
                 }
                 else {
-                  
+
                     localStorage.setItem('username', userLogin.username)
                     localStorage.setItem('password', userLogin.password)
                     window.location.href = '/gittix';
@@ -54,13 +55,6 @@ $('#submitUser').on('click', function (event) {
         userProfile()
     }
 
-    // const existingUserLogin = function () {
-
-    //     $.ajax({ url: "/api/user", method: "GET" })
-    //         .then(function () {
-    //             res.redirect(window.location.replace('/gittix'))
-    //         });
-    // }
 })
 
 $('#submitExistingUser').on('click', function (event) {
@@ -94,15 +88,64 @@ $('#submitExistingUser').on('click', function (event) {
 })
 
 $('#user-info').on('click', function (event) {
+    $("#changePass").prop('disabled', false)
     let renderUser = localStorage.getItem('username')
     let renderPass = localStorage.getItem('password')
     console.log('im here')
     let hiddenPass = "*".repeat(renderPass.length)
     $('#modaluser').text(renderUser);
     $('#modalbody').text(hiddenPass);
+    $("#changePassbtn").remove();
+
 })
 
-$('#logout').on('click', function(event){
+
+$('#changePass').on('click', function () {
+    $(this).prop('disabled', true);
+    $('#changePass-one').append('<input class = "form-control" id = "newPassChange" placeholder="New Password"/>')
+    $('#changePass-two').append('<input class = "form-control" id = "confirmPassChange" placeholder ="Confirm New Password"/>')
+    $('#changePassword').append('<button id = "changePassbtn" "type = "button" class="btn btn-primary btnhide" data-dismiss="modal">Submit</button>')
+    $(".btnhide").removeClass('hide')
+
+})
+
+
+$('body').on('click', '#changePassbtn', function () {
+
+    const chngPass = {
+        username: localStorage.getItem('username'),
+        password: $('#newPassChange').val().trim(),
+        passwordConf: $('#confirmPassChange').val().trim()
+    };
+    console.log(chngPass)
+    if (chngPass.password !== chngPass.passwordConf) {
+        var err = new Error('Passwords do not match.');
+        err.status = 400;
+        console.log(err)
+        return (err)
+    }
+    else {
+        $.ajax({
+            url: '/api/user',
+            method: 'PUT',
+            data: chngPass
+        }).then(function (newPass) {
+            if (newPass === null) {
+                var err = new Error('Passwords do not match.');
+                err.status = 400;
+                console.log(err)
+                return (err)
+            } else {
+                localStorage.setItem('password', chngPass.password)
+                $("#newPassChange").remove();
+                $("#confirmPassChange").remove();
+            }
+        })
+    }
+})
+
+
+$('.log-out').on('click', function (event) {
     localStorage.clear()
-    window.location.href = '/'
+    window.location.href = '/login'
 })
