@@ -40,7 +40,7 @@ const getUserData = function(){
                 centerfeed += `<p class="card-text">${issueBody}</p>
                     <div class="row">
                     <div id="link" class="col align-self-start">
-                    <a href='${issueLink}' target ="blank" >Issue Link</a>
+                    <a href='${issueLink}' target ="blank" >Visit Issue</a>
                     </div>
                     <div class="tags col align-self-end" id="iconSection">
                     <span class="badge badge-primary">${issueState}</span>
