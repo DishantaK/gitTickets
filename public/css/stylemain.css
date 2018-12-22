@@ -79,7 +79,12 @@ main {
  .hide {
      display: none;
  }
-
+  .row {
+      padding-left: 12px;
+  }
+ #iconSection {
+     display: inline;
+ }
 
 @media only screen and (max-width: 700px) {
    

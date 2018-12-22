@@ -34,21 +34,25 @@ const getUserData = function(){
                 <div class="card-body">
                     <h4 class="card-title">${issueTitle}</h4>
                     <h6 class="card-subtitle mb-2 text-muted">Date created: ${date}</h6>`;
-                if(issueState === 'closed'){
-                    centerfeed += '<div id="icon"><i class="fas fa-check" id="check"></i></div>';
-                }      
+                // if(issueState === 'closed'){
+                //     centerfeed += '<div id="icon"><i class="fas fa-check" id="check"></i></div>';
+                // }      
                 centerfeed += `<p class="card-text">${issueBody}</p>
                     <div class="row">
-                    <div id="link">
+                    <div id="link" class="col align-self-start">
                     <a href='${issueLink}' target ="blank" >Issue Link</a>
                     </div>
+                    <div class="tags col align-self-end" id="iconSection">
+                    <span class="badge badge-primary">${issueState}</span>
+                    <span class="badge badge-info">${user}</span>
+                    <span class="badge badge-danger">ISSUE NUMBER :: ${issueNum}</span>
+                </div>
                     </div>
-                        <div class="tags col">
-                            <span class="badge badge-primary">${issueState}</span>
-                            <span class="badge badge-info">${user}</span>
-                        </div>
+                        
                     </div>
-                </div>`
+                </div>`;
+
+                
         }    $('.center-feed').append(centerfeed);
     })
 }
