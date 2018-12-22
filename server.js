@@ -16,7 +16,8 @@ app.use(express.static('public'));
 
 app.post('/sendRecover', function(req, res){
     console.log(`post works`);
- 
+
+  
     var transporter = nodeMailer.createTransport({
       host: 'smtp.zoho.com',
       port: 465,
@@ -29,9 +30,12 @@ app.post('/sendRecover', function(req, res){
         rejectUnauthorized: false
       }
     });
+  
+   
     var mailOptions = {
+   
       from: '"gitTix Manager" <gittixcontact@dishantak.com>', // sender address
-      to: req.body.email, // list of receivers contactgittix@gmail.com
+      to: `contactgittix@gmail.com` , // list of receivers 
       subject: `gittix - Password Recovery for`, // Subject line
       text: `Password Recovery`, // plain text body
       html: `
@@ -45,7 +49,7 @@ app.post('/sendRecover', function(req, res){
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         console.log(error);
-        res.send(`Nah, that's not happening :  <a href="/recover">Try again? </a>`);
+        res.send(`Nah, that's not happening :  <a href="/recovery">Try again? </a>`);
       } else {
         res.send(`Email Sent :  <a href="/">Go Home? </a>`);
       }
