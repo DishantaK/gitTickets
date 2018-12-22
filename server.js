@@ -31,7 +31,7 @@ app.post('/sendRecover', function(req, res){
     });
     var mailOptions = {
       from: '"gitTix Manager" <gittixcontact@dishantak.com>', // sender address
-      to: 'contactgittix@gmail.com', // list of receivers
+      to: req.body.email, // list of receivers contactgittix@gmail.com
       subject: `gittix - Password Recovery for`, // Subject line
       text: `Password Recovery`, // plain text body
       html: `
